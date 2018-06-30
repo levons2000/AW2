@@ -1,5 +1,6 @@
 package com.example.levon.zakuskiproject;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -42,6 +45,34 @@ public class ItemsAdapter extends ArrayAdapter<Items> {
         textViewSubName.setText(items.getCountry());
         ImageView imageView = view.findViewById(R.id.list_item_image);
         Picasso.get().load(items.getImgUrl()).into(imageView);
+        calorieSetter(items, view);
         return view;
+    }
+
+    @SuppressLint({"ResourceAsColor", "SetTextI18n"})
+    private void calorieSetter(Items items, View view){
+        TextView textView = view.findViewById(R.id.calorie);
+        switch (items.getCalorie().getI()){
+            case 1:
+                textView.setText("Low carb");
+                textView.setTextColor(R.color.lowcrabColor);
+                break;
+            case 2:
+                textView.setText("Medium carb");
+                textView.setTextColor(R.color.mediumcarbColor);
+                break;
+            case 3:
+                textView.setText("Balanced");
+                textView.setTextColor(R.color.balancedColor);
+                break;
+            case 4:
+                textView.setText("Low fat");
+                textView.setTextColor(R.color.lowfatColor);
+                break;
+            case 5:
+                textView.setText("Medium fat");
+                textView.setTextColor(R.color.mediumfatColor);
+                break;
+        }
     }
 }

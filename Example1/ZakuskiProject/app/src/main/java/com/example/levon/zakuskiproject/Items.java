@@ -5,12 +5,14 @@ public class Items{
     private String country;
     private String imgUrl;
     private String wikiUrl;
+    private Calorie calorie;
 
-    public Items(String name, String country, String imgUrl, String wikiUrl) {
+    public Items(String name, String country, String imgUrl, String wikiUrl , Calorie calorie) {
         this.name = name;
         this.country = country;
         this.imgUrl = imgUrl;
         this.wikiUrl = wikiUrl;
+        this.calorie = calorie;
     }
 
     public String getName() {
@@ -29,6 +31,9 @@ public class Items{
 
     public String getWikiUrl() {
         return wikiUrl;
+    }
+    public Calorie getCalorie() {
+        return calorie;
     }
 
 }

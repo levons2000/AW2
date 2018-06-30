@@ -3,4 +3,9 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="lowcrabColor">#a716cf</color>
+    <color name="mediumcarbColor">#f580d0</color>
+    <color name="balancedColor">#01dcfd</color>
+    <color name="lowfatColor">#ff9d00</color>
+    <color name="mediumfatColor">#ff0000</color>
 </resources>
